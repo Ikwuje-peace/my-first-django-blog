@@ -1,0 +1,40 @@
+{% load static%}
+
+<!Doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LF Fashion</title>
+	<link rel="stylesheet" type="text/css" href='{% static "style.css"%}'>
+</head>
+<body>
+	<header>
+			<div id="banner">
+				<center>
+					LF fashion <br>
+				</center>
+				
+				<section id="link">
+				<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+					<a href="/home">Home</a>&nbsp;&nbsp;
+					<a href="/post">Post</a>&nbsp;&nbsp;
+					<a href="/category">Categories</a>&nbsp;&nbsp;
+					<a href="/login">Log In</a>
+				</section>
+				</nav>
+				
+			</div>
+		</header>
+		<div id="home" style="background:url('{% static "image/img/b.jpg"%}');">
+		</div>
+	<div>
+		<center>
+			<form method="post">
+				{% csrf_token%}
+				{{form.as_p}}
+				<input type="submit" value="login">
+			</form>
+		</center>
+	</div>
+</body>
+</html>
